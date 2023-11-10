@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="scheduleRowModel" type="com.meucomp.app.modules.schedule.data.model.ScheduleRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowtime"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearTimestamp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_88pxv"
+            android:layout_marginTop="@dimen/_1pxv"
+            android:layout_weight="0.21" android:layout_width="0dp" android:orientation="vertical">
+            <TextView android:ellipsize="end" android:id="@+id/txtTime"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_1pxh"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{scheduleRowModel.txtTime}"
+                style="@style/txtPoppinsmedium16" tools:text="@string/lbl_11_35"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTimeOne"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_3pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{scheduleRowModel.txtTimeOne}"
+                style="@style/txtPoppinsmedium14" tools:text="@string/lbl_13_05"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnsentiansiedade"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_1pxv"
+            android:layout_weight="0.79" android:layout_width="0dp"
+            android:orientation="vertical" style="@style/groupStyleindigo_A200cornerRadius">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowsentiansiedade"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_15pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSentiansiedade"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.98"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{scheduleRowModel.txtSentiansiedade}"
+                    style="@style/txtPoppinssemibold16" tools:text="@string/msg_pensamento_disf"/>
+                <ImageView android:id="@+id/imageEllipsisvTwo"
+                    android:layout_height="@dimen/_12pxh"
+                    android:layout_marginBottom="@dimen/_5pxv"
+                    android:layout_marginStart="@dimen/_3pxh"
+                    android:layout_marginTop="@dimen/_6pxv"
+                    android:layout_width="@dimen/_4pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_ellipsisv2"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_ellipsisv2"/>
+            </LinearLayout>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtDescription"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_4pxv"
+                android:layout_width="match_parent"
+                android:text="@{scheduleRowModel.txtDescription}"
+                style="@style/txtPoppinsmedium12" tools:text="@string/msg_pensamento_x_oc"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowlocation"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_6pxv"
+                android:layout_marginEnd="@dimen/_18pxh"
+                android:layout_marginStart="@dimen/_18pxh"
+                android:layout_marginTop="@dimen/_32pxv"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageLocation"
+                    android:layout_height="@dimen/_13pxh"
+                    android:layout_marginBottom="@dimen/_2pxv"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_width="@dimen/_11pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_location"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_location"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtEmcasa"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12pxh"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{scheduleRowModel.txtEmcasa}"
+                    style="@style/txtPoppinsregular12" tools:text="@string/lbl_em_casa"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

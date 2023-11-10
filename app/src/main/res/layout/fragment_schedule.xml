@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="scheduleVM" type="com.meucomp.app.modules.schedule.data.viewmodel.ScheduleVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearColumnlanguage"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_22pxv"
+        android:layout_marginTop="@dimen/_31pxv"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_51">
+        <androidx.appcompat.widget.Toolbar android:gravity="start"
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_28pxh"
+            android:layout_marginStart="@dimen/_28pxh"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linearRowhoje"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:id="@+id/linearRowlanguage"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.78"
+                    android:layout_width="0dp" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLanguage"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.45"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{scheduleVM.scheduleModel.txtLanguage}"
+                        style="@style/txtPoppinsmedium44" tools:text="@string/lbl_24"/>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearColumnqua"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_11pxv"
+                        android:layout_marginStart="@dimen/_8pxh"
+                        android:layout_marginTop="@dimen/_12pxv"
+                        android:layout_weight="0.55"
+                        android:layout_width="0dp" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtQua"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_10pxh"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{scheduleVM.scheduleModel.txtQua}"
+                            style="@style/txtPoppinsmedium14" tools:text="@string/lbl_qua"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtJanCounter"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{scheduleVM.scheduleModel.txtJanCounter}"
+                            style="@style/txtPoppinsmedium14" tools:text="@string/lbl_jan_2024"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtHoje"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_19pxv"
+                    android:layout_marginStart="@dimen/_134pxh"
+                    android:layout_marginTop="@dimen/_22pxv"
+                    android:layout_weight="0.22"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{scheduleVM.scheduleModel.txtHoje}"
+                    style="@style/txtPoppinssemibold16_1" tools:text="@string/lbl_hoje"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearColumn"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylegray_51">
+            <LinearLayout android:gravity="center_horizontal"
+                android:id="@+id/linearColumnlineone"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylewhite_1">
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearCalendar"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16pxv"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical" style="@style/groupStylecornerRadius">
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearRowd"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_25pxh"
+                        android:layout_marginStart="@dimen/_25pxh"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal" style="@style/groupStylecornerRadius">
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearColumnd"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_6pxv"
+                            android:layout_marginTop="@dimen/_6pxv"
+                            android:layout_weight="0.18"
+                            android:layout_width="0dp" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtD"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_10pxh"
+                                android:layout_marginStart="@dimen/_3pxh"
+                                android:layout_width="wrap_content"
+                                android:singleLine="true"
+                                android:text="@{scheduleVM.scheduleModel.txtD}"
+                                style="@style/txtPoppinsmedium12_1" tools:text="@string/lbl_d"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtTwentyOne"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_10pxh"
+                                android:layout_marginTop="@dimen/_1pxv"
+                                android:layout_width="wrap_content"
+                                android:singleLine="true"
+                                android:text="@{scheduleVM.scheduleModel.txtTwentyOne}"
+                                style="@style/txtPoppinssemibold16_2" tools:text="@string/lbl_21"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearColumns"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_6pxv"
+                            android:layout_marginTop="@dimen/_6pxv"
+                            android:layout_weight="0.2"
+                            android:layout_width="0dp" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtS"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_10pxh"
+                                android:layout_marginStart="@dimen/_5pxh"
+                                android:layout_width="wrap_content"
+                                android:singleLine="true"
+                                android:text="@{scheduleVM.scheduleModel.txtS}"
+                                style="@style/txtPoppinsmedium12_1" tools:text="@string/lbl_s"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtTwentyTwo"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_10pxh"
+                                android:layout_marginTop="@dimen/_1pxv"
+                                android:layout_width="wrap_content"
+                                android:singleLine="true"
+                                android:text="@{scheduleVM.scheduleModel.txtTwentyTwo}"
+                                style="@style/txtPoppinssemibold16_2" tools:text="@string/lbl_22"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearColumnt"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_6pxv"
+                            android:layout_marginTop="@dimen/_6pxv"
+                            android:layout_weight="0.16"
+                            android:layout_width="0dp" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtT"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_10pxh"
+                                android:layout_marginStart="@dimen/_5pxh"
+                                android:layout_width="wrap_content"
+                                android:singleLine="true"
+                                android:text="@{scheduleVM.scheduleModel.txtT}"
+                                style="@style/txtPoppinsmedium12_1" tools:text="@string/lbl_t"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtTwentyThree"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_10pxh"
+                                android:layout_marginTop="@dimen/_1pxv"
+                                android:layout_width="wrap_content"
+                                android:singleLine="true"
+                                android:text="@{scheduleVM.scheduleModel.txtTwentyThree}"
+                                style="@style/txtPoppinssemibold16_2" tools:text="@string/lbl_23"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:id="@+id/linearColumnq"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:layout_width="0dp"
+                            android:orientation="vertical" style="@style/groupStyleindigo_900cornerRadius">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtQ"
+                                android:layout_gravity="start"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_14pxh"
+                                android:layout_marginStart="@dimen/_14pxh"
+                                android:layout_marginTop="@dimen/_7pxv"
+                                android:layout_width="wrap_content"
+                                android:singleLine="true"
+                                android:text="@{scheduleVM.scheduleModel.txtQ}"
+                                style="@style/txtPoppinsmedium12" tools:text="@string/lbl_q"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtTwentyFour"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_6pxv"
+                                android:layout_marginEnd="@dimen/_10pxh"
+                                android:layout_marginStart="@dimen/_10pxh"
+                                android:layout_marginTop="@dimen/_1pxv"
+                                android:layout_width="wrap_content"
+                                android:singleLine="true"
+                                android:text="@{scheduleVM.scheduleModel.txtTwentyFour}"
+                                style="@style/txtPoppinssemibold16" tools:text="@string/lbl_242"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearColumnqOne"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_6pxv"
+                            android:layout_marginStart="@dimen/_20pxh"
+                            android:layout_marginTop="@dimen/_7pxv"
+                            android:layout_weight="0.12"
+                            android:layout_width="0dp" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtQOne"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_10pxh"
+                                android:layout_marginStart="@dimen/_5pxh"
+                                android:layout_width="wrap_content"
+                                android:singleLine="true"
+                                android:text="@{scheduleVM.scheduleModel.txtQOne}"
+                                style="@style/txtPoppinsmedium12_1" tools:text="@string/lbl_q"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtTwentyFive"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_10pxh"
+                                android:layout_marginTop="@dimen/_1pxv"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{scheduleVM.scheduleModel.txtTwentyFive}"
+                                style="@style/txtPoppinssemibold16_2" tools:text="@string/lbl_25"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:id="@+id/linearColumnsOne"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_6pxv"
+                            android:layout_marginStart="@dimen/_20pxh"
+                            android:layout_marginTop="@dimen/_6pxv"
+                            android:layout_weight="0.12"
+                            android:layout_width="0dp" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtSOne"
+                                android:layout_gravity="start"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_18pxh"
+                                android:layout_marginStart="@dimen/_6pxh"
+                                android:layout_width="wrap_content"
+                                android:singleLine="true"
+                                android:text="@{scheduleVM.scheduleModel.txtSOne}"
+                                style="@style/txtPoppinsmedium12_1" tools:text="@string/lbl_s"/>
+                            <TextView android:ellipsize="end"
+                                android:gravity="start"
+                                android:id="@+id/txtTwentySix"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_12pxh"
+                                android:layout_marginTop="@dimen/_1pxv"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{scheduleVM.scheduleModel.txtTwentySix}"
+                                style="@style/txtPoppinssemibold16_2" tools:text="@string/lbl_26"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="end"
+                            android:id="@+id/linearColumnsTwo"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_6pxv"
+                            android:layout_marginStart="@dimen/_20pxh"
+                            android:layout_marginTop="@dimen/_6pxv"
+                            android:layout_weight="0.07"
+                            android:layout_width="0dp" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtSTwo"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_5pxh"
+                                android:layout_marginStart="@dimen/_6pxh"
+                                android:layout_width="wrap_content"
+                                android:singleLine="true"
+                                android:text="@{scheduleVM.scheduleModel.txtSTwo}"
+                                style="@style/txtPoppinsmedium12_1" tools:text="@string/lbl_s"/>
+                            <TextView android:ellipsize="end"
+                                android:gravity="start"
+                                android:id="@+id/txtTwentySeven"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_1pxv"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{scheduleVM.scheduleModel.txtTwentySeven}"
+                                style="@style/txtPoppinssemibold16_2" tools:text="@string/lbl_27"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View android:background="@color/gray_50"
+                        android:id="@+id/lineLineOne"
+                        android:layout_gravity="start"
+                        android:layout_height="@dimen/_1pxv"
+                        android:layout_marginTop="@dimen/_12pxv" android:layout_width="@dimen/_375pxh"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearColumnhora"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_marginEnd="@dimen/_27pxh"
+                    android:layout_marginStart="@dimen/_27pxh"
+                    android:layout_marginTop="@dimen/_18pxv"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <LinearLayout android:id="@+id/linearRowplus"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_1pxh"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <LinearLayout android:id="@+id/linearRowhora"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.89"
+                            android:layout_width="0dp" android:orientation="horizontal">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtHora"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.27"
+                                android:layout_width="0dp"
+                                android:singleLine="true"
+                                android:text="@{scheduleVM.scheduleModel.txtHora}"
+                                style="@style/txtPoppinsmedium14" tools:text="@string/lbl_hora"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtPensamento"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_35pxh"
+                                android:layout_weight="0.73"
+                                android:layout_width="0dp"
+                                android:singleLine="true"
+                                android:text="@{scheduleVM.scheduleModel.txtPensamento}"
+                                style="@style/txtPoppinsmedium14" tools:text="@string/lbl_pensamento"/>
+                        </LinearLayout>
+                        <ImageView android:id="@+id/imagePlus"
+                            android:layout_height="@dimen/_20pxh"
+                            android:layout_marginBottom="@dimen/_1pxv"
+                            android:layout_marginStart="@dimen/_138pxh"
+                            android:layout_marginTop="@dimen/_1pxv"
+                            android:layout_width="@dimen/_20pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_plus"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_plus"/>
+                    </LinearLayout>
+                    <FrameLayout
+                        android:id="@+id/frameStackrectangleseven"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_467pxv"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_19pxv" android:layout_width="@dimen/_318pxh">
+                        <View android:background="@color/gray_50"
+                            android:id="@+id/lineRectangleSeven"
+                            android:layout_gravity="start"
+                            android:layout_height="@dimen/_467pxv"
+                            android:layout_marginEnd="@dimen/_50pxh"
+                            android:layout_marginStart="@dimen/_50pxh" android:layout_width="@dimen/_2pxh"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerSchedule"
+                            android:layout_gravity="top|start"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_10pxv"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            itemSpace="@{@dimen/_15pxh}"
+                            tools:itemCount="3" tools:listitem="@layout/row_schedule"/>
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
